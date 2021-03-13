@@ -1,0 +1,43 @@
+.badge
+  
+  &-border
+    stroke-dasharray 1250
+    stroke-dashoffset 0
+    transition stroke-dashoffset .5s ease-in
+    transform rotate(180deg)
+    transform-origin center
+    &--hidden
+      transform rotate(180deg)
+      transform-origin center
+      opacity 0.7
+  
+  &:hover
+    .badge
+      &-border
+        stroke-dashoffset -1250
+      &-content
+        path
+          for i in (1...4)
+            &:nth-child({i})
+              $duration = .2s * i
+              animation translateAnimation $duration .1s linear both
+              
+       &-popup
+         animation popupAnimation .4s .5s linear both
+            
+            
+@keyframes popupAnimation
+  from
+    opacity 0
+    transform scaleX(1.1) translateX(-30px)
+  to
+    opacity 1
+    transform scaleX(1) translateX(0)
+    
+@keyframes translateAnimation
+  from
+    opacity 0
+    transform translateY(10px)
+  to
+    opacity 1
+    transform translateY(0)

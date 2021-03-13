@@ -1,0 +1,120 @@
+.badge
+  
+  &__bg
+    transform-origin center
+    transition transform .4s ease-in
+  
+  &-border
+    stroke-dasharray 1250
+    stroke-dashoffset 0
+    transition stroke-dashoffset .5s ease-in
+    transform rotate(180deg)
+    transform-origin center
+    &--hidden
+      transform rotate(180deg)
+      transform-origin center
+      opacity 0.7
+ 
+        
+  &:hover
+    .badge
+      &__bg
+        transform scale(1.2)
+        
+      &-border
+        stroke-dashoffset -1250
+         
+    .bug
+      transform-origin 35% 50%
+      animation simulateBugWalk 1s ease-in-out infinite alternate 
+
+      &__leg
+        animation moveLeg .3s ease-in infinite alternate
+
+        &--rb, &--rt, &--rm
+            transform-origin 70% left
+        &--lb, &--lt, &--lm
+            transform-origin 70% right
+
+        &--lb
+            animation-delay .1s
+
+        &--rt
+            animation-delay .15s
+        &--lt
+            animation-delay .5s
+
+        &--rm
+            animation-duration .4s
+            animation-delay .5s
+        &--lm
+            animation-duration .4s
+            animation-delay .15s
+            
+      
+    .content
+      &__first-line
+        path:nth-child(1)
+          animation moveLines .5s ease-in-out infinite alternate
+        path:nth-child(2)
+          animation moveLinesReverse .7s ease-in-out infinite alternate
+        path:nth-child(3)
+          animation moveLines .4s ease-in-out infinite alternate
+      &__second-line
+        path:nth-child(1)
+          animation moveLinesReverse .5s ease-in-out infinite alternate
+        path:nth-child(2)
+          animation moveLinesReverse .7s ease-in-out infinite alternate
+        path:nth-child(3)
+          animation moveLines .5s ease-in-out infinite alternate
+        path:nth-child(4)
+          animation moveLines .8s ease-in-out infinite alternate
+      &__third-line
+        path:nth-child(1)
+          animation moveLines .3s ease-in-out infinite alternate
+        path:nth-child(2)
+          animation moveLinesReverse .6s ease-in-out infinite alternate
+        path:nth-child(3)
+          animation moveLinesReverse .9s ease-in-out infinite alternate
+      &__fourth-line
+        path:nth-child(1)
+          animation moveLinesReverse .5s ease-in-out infinite alternate
+        path:nth-child(2)
+          animation moveLines .6s ease-in-out infinite alternate
+        path:nth-child(3)
+          animation moveLines .3s ease-in-out infinite alternate
+      
+ @keyframes simulateBugWalk
+   0%
+     opacity 0
+     transform translateY(30px)
+   25%
+     transform translateY(0px)
+   50%
+     opacity 1
+     transform rotate(-4deg) translateY(0)
+   100%
+     opacity 1
+     transform rotate(4deg) translateY(0)
+ 
+@keyframes moveLeg
+  from
+    transform rotate(0.3deg)
+  to
+    transform rotate(-0.3deg)
+    
+ @keyframes moveLines
+   0%
+     opacity 0.25
+     transform translateX(-.5%)
+   100%
+     opacity 0.5
+     transform translateX(1%)
+     
+ @keyframes moveLinesReverse
+   0%
+     opacity 0.25
+     transform translateX(1%)
+   100%
+     opacity 0.4
+     transform translateX(-.5%)

@@ -1,0 +1,109 @@
+.badge-border {
+  stroke-dasharray: 1250;
+  stroke-dashoffset: 0;
+  transition: stroke-dashoffset 0.5s ease-in;
+  transform: rotate(180deg);
+  transform-origin: center;
+}
+.badge-border--hidden {
+  transform: rotate(180deg);
+  transform-origin: center;
+  opacity: 0.7;
+}
+.badge:hover .badge-border {
+  stroke-dashoffset: -1250;
+}
+.badge:hover .badge-content path:nth-child(1) {
+  animation: translateAnimation 0.2s 0.1s linear both;
+}
+.badge:hover .badge-content path:nth-child(2) {
+  animation: translateAnimation 0.4s 0.1s linear both;
+}
+.badge:hover .badge-content path:nth-child(3) {
+  animation: translateAnimation 0.6s 0.1s linear both;
+}
+.badge:hover .badge-popup {
+  animation: popupAnimation 0.4s 0.5s linear both;
+}
+@-moz-keyframes popupAnimation {
+  from {
+    opacity: 0;
+    transform: scaleX(1.1) translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: scaleX(1) translateX(0);
+  }
+}
+@-webkit-keyframes popupAnimation {
+  from {
+    opacity: 0;
+    transform: scaleX(1.1) translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: scaleX(1) translateX(0);
+  }
+}
+@-o-keyframes popupAnimation {
+  from {
+    opacity: 0;
+    transform: scaleX(1.1) translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: scaleX(1) translateX(0);
+  }
+}
+@keyframes popupAnimation {
+  from {
+    opacity: 0;
+    transform: scaleX(1.1) translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: scaleX(1) translateX(0);
+  }
+}
+@-moz-keyframes translateAnimation {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@-webkit-keyframes translateAnimation {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@-o-keyframes translateAnimation {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes translateAnimation {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/*# sourceMappingURL=first-course.721c548b.css.map */
