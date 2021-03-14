@@ -1,11 +1,56 @@
 mixin icon(badge)
-	- const data = { "first-course": "Primeiro curso", "technical-course": "Técnico em Infonet" }
+	- const data = { "3-react-projects": "+3 Projetos React", "3-vue-projects": "+3 projetos Vue", "10-days-10-pens": "10 dias, 10 pens", "bigger-front-team": "Equipe 20+ fronts", "brasiljs-21": "BrasilJS 21", "digital-design": "Bacharel Design", "front-team": "Equipe 1+ Fronts", "good-listener": "Boa Ouvinte", "hackathon": "Primeiro Hackathon", "hugo": "New Tech: Hugo", "job-atelie": "Emprego de Front", "job-class": "Emprego Designer", "js-performance": "Performance com JS", "machine-learning": "Machine Learning", "max-evaluation": "Profissional nota 5", "meeting-client": "Reunião no Cliente", "meetup-marathon": "Maratona Meetups", "plenissima": "Pleníssima", "seniorita": "Seniorita", "tcc": "TCC Nota 10", "travel": "Viagem a Trabalho", "women": "Mulheres na equipe",  "first-course": "Primeiro curso", "technical-course": "Técnico em Infonet" }
 
 	section(class="badge__icon-container")
 		case (badge)
-			when 'first-course'
+			when "3-react-projects"
+				include ./badges/3-react-projects/index.svg
+			when "3-vue-projects"
+				include ./badges/3-vue-projects/index.svg
+			when "10-days-10-pens"
+				include ./badges/10-days-10-pens/index.svg
+			when "bigger-front-team"
+				include ./badges/bigger-front-team/index.svg
+			when "brasiljs-21"
+				include ./badges/brasiljs-21/index.svg
+			when "digital-design"
+				include ./badges/digital-design/index.svg
+			when "first-course"
 				include ./badges/first-course/index.svg
-			when 'technical-course'
+			when "front-team"
+				include ./badges/front-team/index.svg
+			when "good-listener"
+				include ./badges/good-listener/index.svg
+			when "hackathon"
+				include ./badges/hackathon/index.svg
+			when "hugo"
+				include ./badges/hugo/index.svg
+			when "job-atelie"
+				include ./badges/job-atelie/index.svg
+			when "job-class"
+				include ./badges/job-class/index.svg
+			when "js-performance"
+				include ./badges/js-performance/index.svg
+			when "machine-learning"
+				include ./badges/machine-learning/index.svg
+			when "max-evaluation"
+				include ./badges/max-evaluation/index.svg
+			when "meeting-client"
+				include ./badges/meeting-client/index.svg
+			when "meetup-marathon"
+				include ./badges/meetup-marathon/index.svg
+			when "plenissima"
+				include ./badges/plenissima/index.svg
+			when "seniorita"
+				include ./badges/seniorita/index.svg
+			when "tcc"
+				include ./badges/tcc/index.svg
+			when "technical-course"
 				include ./badges/technical-course/index.svg
+			when "travel"
+				include ./badges/travel/index.svg
+			when "women"
+				include ./badges/women/index.svg
+
 		p(class="badge__icon-label") #{data[badge]}
 			
