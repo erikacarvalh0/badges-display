@@ -1,0 +1,50 @@
+.badge
+	&__description
+		background url('../images/description-bg.svg') no-repeat center
+		background-size cover
+		display flex
+		flex-direction column
+		justify-content center
+		transform rotateY(180deg)
+		z-index -1
+		transition transform .6s ease, z-index .15s .1s linear
+		
+		.icon.book
+			width 25px
+			height 25px
+			margin 0 auto
+			color #3F4147
+
+		&-label
+			width 120px
+			margin 0 auto
+			text-align center
+			color white
+			font-size 10px
+			text-transform uppercase
+
+		&-highlight
+			width 130px
+			margin 10px auto 3px
+			text-align center
+			color #3F4147
+			font-size 18px
+			font-weight bold
+			text-transform lowercase
+			font-family 'Josefin Sans', sans-serif
+
+		&-period
+			width 100px
+			margin 15px auto 0
+			text-align center
+			color white
+			font-size 10px
+			font-weight bold
+			text-transform lowercase
+
+	&__checkbox
+		&:checked
+			& + .badge__label
+				.badge__description
+					z-index 1
+					transform rotateY(0)

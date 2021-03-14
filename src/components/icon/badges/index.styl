@@ -1,0 +1,22 @@
+.badge
+	&__bg
+		transform-origin center
+		transition transform .4s ease-in
+
+	&-border
+		stroke-dasharray 1250
+		stroke-dashoffset 0
+		transition stroke-dashoffset .5s ease-in
+		transform rotate(180deg)
+		transform-origin center
+
+		&--hidden
+			transform rotate(180deg)
+			transform-origin center
+
+	&__icon-container:hover
+		.badge
+			&__bg
+				transform scale(1.2)
+			&-border
+				stroke-dashoffset -1250

@@ -1,0 +1,11 @@
+mixin icon(badge)
+	- const data = { "first-course": "Primeiro curso", "technical-course": "Técnico em Infonet" }
+
+	section(class="badge__icon-container")
+		case (badge)
+			when 'first-course'
+				include ./badges/first-course/index.svg
+			when 'technical-course'
+				include ./badges/technical-course/index.svg
+		p(class="badge__icon-label") #{data[badge]}
+			

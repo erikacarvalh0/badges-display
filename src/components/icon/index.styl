@@ -1,0 +1,22 @@
+.badge
+	&__icon-container
+		transform rotateY(0)
+		transition transform .6s ease, opacity .65s ease-out
+
+	&__icon-label
+		position absolute
+		bottom 5px
+		left 50%
+		width 130px
+		margin 0
+		line-height .9em
+		color white
+		text-transform uppercase
+		text-align center
+		transform translateX(-50%)
+
+	&__checkbox
+		&:checked
+			& + .badge__label
+				.badge__icon-container
+					transform rotateY(-180deg)

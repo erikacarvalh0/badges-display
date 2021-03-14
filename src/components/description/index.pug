@@ -1,0 +1,11 @@
+
+- const data = { "first-course": { label: "Primeiro curso relacionado a área", highlight: "Web design", period: "2011" } , "technical-course": { label: "Curso feito na ETEC Parque Belém", highlight: "informática para internet", period: "2012 - 2013" }}
+
+mixin description(badge)
+
+	section(class="badge__description")
+		include ../../images/icons/book.svg
+		p(class="badge__description-highlight") #{data[badge].highlight}
+		p(class="badge__description-label") !{data[badge].label}
+		p(class="badge__description-period") #{data[badge].period}
+			

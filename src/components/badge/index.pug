@@ -1,0 +1,10 @@
+include ../icon/index.pug
+include ../description/index.pug
+
+mixin badge(badge)
+	li(class="badge__item")
+		input(class="badge__checkbox" type="checkbox" id=badge)
+		label(class="badge__label" for=badge)
+			+icon(badge)
+			+description(badge)
+

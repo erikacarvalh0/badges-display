@@ -1,29 +1,5 @@
 .badge
-  
-  &__bg
-    transform-origin center
-    transition transform .4s ease-in
-  
-  &-border
-    stroke-dasharray 1250
-    stroke-dashoffset 0
-    transition stroke-dashoffset .5s ease-in
-    transform rotate(180deg)
-    transform-origin center
-    &--hidden
-      transform rotate(180deg)
-      transform-origin center
-      opacity 0.7
- 
-        
-  &:hover
-    .badge
-      &__bg
-        transform scale(1.2)
-        
-      &-border
-        stroke-dashoffset -1250
-         
+  &__icon-container:hover
     .bug
       transform-origin 35% 50%
       animation simulateBugWalk 1s ease-in-out infinite alternate 

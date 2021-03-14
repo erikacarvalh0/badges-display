@@ -1,20 +1,24 @@
 doctype html
 
-include ./components/first-course/index.pug
-link( href="./components/first-course/index.styl" rel="stylesheet")
+include ./components/badge/index.pug
+
 
 head
 	title The Simple Dollar - Car Insurance
 	meta( charset="UTF-8" )
 	meta( name="viewport" content="width=device-width, initial-scale=1" )
 	meta( name="robots" content="noindex, noimageindex, nofollow, nosnippet" )
+	link( rel="preconnect" href="https://fonts.gstatic.com")
+	link( href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;700&family=Nunito:wght@300;400&display=swap" rel="stylesheet")
+	link( href="./style/index.styl" rel="stylesheet")
 
 body
 
 	div(class="site")
 
 		main(class="main")
-			h1 Hellow
-			+first-course()
+			ul(class="badges__list")
+				+badge('first-course')
+				+badge('technical-course')
 				
 
