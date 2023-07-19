@@ -18,9 +18,12 @@
   "homepage": "https://github.com/erikacarvalh0/badges-display#readme",
   "description": "",
   "devDependencies": {
-    "parcel": "^2.0.0-beta.1",
-    "parcel-bundler": "^1.12.3",
+    "@parcel/transformer-pug": "^2.0.0-nightly.627",
+    "parcel": "^2.0.0-beta.1"
+  },
+  "dependencies": {
+    "parcel-bundler": "^1.12.5",
     "pug": "^3.0.2",
-    "stylus": "^0.54.8"
+    "stylus": "^0.59.0"
   }
 }
