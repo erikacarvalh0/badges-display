@@ -1,0 +1,44 @@
+.badge__icon-container:hover
+	.pl
+		.notebook
+			&.image
+				animation translateAnimation .5s .1s linear both
+			&.content
+				path
+					for i in (1...4)
+						&:nth-child({i})
+							$duration = .5s + (.2s * i)
+							animation clip $duration .5s linear infinite
+
+		.shoe.up
+			transform-origin 73% 28%
+			animation shakeFoot 1s .1s ease-in infinite alternate
+
+		.hand
+			&.left
+				transform-origin 48% 46%
+				animation moveHand .9s .3s ease-in infinite reverse
+
+			&.right
+				transform-origin 53% 48%
+				animation moveHand .7s .2s ease-in infinite alternate
+
+@keyframes shakeFoot
+	0%
+		transform rotate(-5deg)
+
+	50%
+		transform rotate(3deg)
+
+	100%
+		transform rotate(0)
+
+@keyframes moveHand
+	0%
+		transform rotateY(25deg)
+
+	50%
+		transform rotateY(-15deg)
+
+	100%
+		transform rotateY(0)
