@@ -1,0 +1,92 @@
+.badge__icon-container:hover
+	.placeholder
+		transform-origin center
+
+		&.banner
+			animation expandBoxOpacity .3s .1s linear both
+		
+		&.image-1
+			animation expandBoxOpacity .5s .1s linear both
+		
+		&.image-2
+			animation expandBoxOpacity .55s .1s linear both
+		
+		&.image-3
+			animation expandBoxOpacity .6s .1s linear both
+
+	.banner:not(.placeholder)
+		animation repositionBanner .4s .8s linear both
+
+	.image-1:not(.placeholder)
+		animation repositionImage1 .5s .8s linear both
+
+	.image-2:not(.placeholder)
+		animation repositionImage2 .6s .8s linear both
+
+	.image-3:not(.placeholder)
+		animation repositionImage3 .7s .8s linear both
+
+
+@keyframes repositionBanner 
+	0%
+		opacity 0
+		transform translate(-7px, -12px)
+
+	20%
+		opacity .1
+		transform translate(-7px, -12px)
+
+	100%
+		opacity 1
+		transform translate(0, 0)
+
+
+@keyframes repositionImage1
+	0%
+		opacity 0
+		transform translate(-6px, -5px)
+
+	20%
+		opacity .1
+		transform translate(-6px, -5px)
+
+	100%
+		opacity 1
+		transform translate(0, 0)
+
+
+@keyframes repositionImage2
+	0%
+		opacity 0
+		transform translate(-5px, -26px)
+
+	20%
+		opacity .1
+		transform translate(-5px, -26px)
+
+	100%
+		opacity 1
+		transform translate(0, 0)
+
+
+@keyframes repositionImage3
+	0%
+		opacity 0
+		transform translate(-8px, -16px)
+
+	20%
+		transform translate(-8px, -16px)
+
+	100%
+		opacity 1
+		transform translate(0, 0)
+
+
+@keyframes expandBoxOpacity
+	0%
+		opacity 0
+		transform scale(0.9)
+
+	100%
+		opacity 1
+		transform scale(1)
