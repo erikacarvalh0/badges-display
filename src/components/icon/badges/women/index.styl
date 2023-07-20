@@ -1,0 +1,38 @@
+.badge__icon-container:hover
+	.women
+		.person
+			&.left
+				animation getCloser .5s .1s linear both
+				.head
+					transform-origin 46% 34%
+					animation headToShoulder .7s .1s linear both
+			
+			&.right
+				animation getCloserRight .5s .1s linear both
+				.head
+					transform-origin 65% 30%
+					animation headToHead .7s .1s linear both
+
+@keyframes headToHead
+	0%
+		transform rotate(0) translate(0, 0px)
+	100%
+		transform rotate(-3deg) translate(-3px, 0px)
+
+@keyframes headToShoulder
+	0%
+		transform rotate(0) translate(0, 0px)
+	100%
+		transform rotate(9deg) translate(5px, 0px)
+
+@keyframes getCloserRight
+	0%
+		transform translate(0, 0)
+	100%
+		transform translate(-5px, 3px)
+
+@keyframes getCloser
+	0%
+		transform translate(0, 0)
+	100%
+		transform translate(5px, -5px)
