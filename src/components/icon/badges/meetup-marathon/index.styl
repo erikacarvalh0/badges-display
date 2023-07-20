@@ -1,0 +1,48 @@
+.badge__icon-container:hover
+	.rocket
+		animation launchRocket .5s .5s ease-out both
+	
+	.building__light
+		animation blink .8s .1s linear infinite
+
+	.shooting-star.-one
+		animation shootStar 3s .5s ease-in-out infinite
+
+	.shooting-star.-two
+		animation shootStar 5s .5s ease-in-out infinite
+
+	.stars
+		path
+			for i in (1...10)
+				&:nth-child({i})
+					$delay = .2s * i
+					$duration = .5s * (i/2)
+					animation blink $duration $delay ease infinite
+
+@keyframes blink
+	0%
+		opacity 0
+	60%
+		opacity 1
+	0%
+		opacity 0
+
+@keyframes launchRocket
+	0%
+		transform translate(0, 0)
+	100%
+		transform translate(0, -240px)
+
+
+@keyframes shootStar
+	0%
+		opacity 0
+		clip-path polygon(0% 0%, 100% 0%, 100% 100%, 100% 0%)
+
+	80%
+		opacity 1
+		clip-path polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)
+	
+	100%
+		opacity 0
+	
