@@ -1,16 +1,14 @@
-.badge
-  &__icon-container:hover
-    .badge
-      &-content
-        path
-          for i in (1...4)
-            &:nth-child({i})
-              $duration = .2s * i
-              animation translateAnimation $duration .1s linear both
-              
-       &-popup
-         animation popupAnimation .4s .5s linear both
-            
+.badge__icon-container:hover
+  .badge
+    &-content
+      path
+        for i in (1...4)
+          &:nth-child({i})
+            $duration = .2s * i
+            animation translateAnimation $duration .1s linear both
+
+      &-popup
+        animation popupAnimation .4s .5s linear both
             
 @keyframes popupAnimation
   from
