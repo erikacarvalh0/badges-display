@@ -1,0 +1,50 @@
+.badge__icon-container:hover
+	.ft
+		.lines, .checkbox
+				&.one
+					animation translateAnimation .4s .1s linear
+				&.two
+					animation translateAnimation .6s .1s linear
+				&.three
+					animation translateAnimation .8s .1s linear
+
+			.lines
+				path
+					for i in (1...4)
+						&:nth-child({i})
+							$duration = .2s * i
+							animation clip $duration .1s linear
+
+			.checkbox
+				&.one
+					path:last-child
+						animation clip .3s .8s linear
+				&.two
+					path:last-child
+						animation clip .5s .8s linear
+				&.three
+					path:last-child
+						animation clip .7s .8s linear
+
+			.person
+				&.top
+					transform-origin 50% 16%
+					animation bounceSimple .6s .8s linear
+				&.left
+					transform-origin 28% 42%
+					animation bounceSimple .7s .8s linear
+				&.bottom
+					transform-origin 66% 56%
+					animation bounceSimple .8s .8s linear
+
+@keyframes bounceSimple
+	0%
+		transform scale(.9)
+	25%
+		transform scale(1)
+	50%
+		transform scale(1.1)
+	75%
+		transform scale(.9)
+	100%
+		transform scale(1)
