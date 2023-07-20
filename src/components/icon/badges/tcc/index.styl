@@ -1,0 +1,46 @@
+.badge
+	&__icon-container:hover
+		.badge
+			.degree
+				transform-origin center
+				animation moveDegree .5s 0s ease-out
+
+			.cap
+				animation translateDownAnimation .5s .1s linear both
+
+				&__ribbon
+					transform-origin 66% 30%
+					animation bounceRibbon 1s .1s linear both
+		
+@keyframes translateDownAnimation
+	from
+		opacity 0
+		transform translateY(-10px)
+	to
+		opacity 1
+		transform translateY(0)
+
+@keyframes moveDegree
+	0%
+		opacity 0
+		transform translateY(20px)
+
+	100%
+		opacity 1
+		transform translateY(0)
+
+@keyframes bounceRibbon
+	0%
+		transform rotate(-10deg)
+	
+	25%
+		transform rotate(5deg)
+	
+	50%
+		transform rotate(-5deg)
+	
+	75%
+		transform rotate(8deg)
+	
+	100%
+		transform rotate(0)
