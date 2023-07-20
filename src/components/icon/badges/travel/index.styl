@@ -1,0 +1,29 @@
+.badge__icon-container:hover
+	.airplane
+		animation flyAirplane 1s .1s linear both
+
+	.clouds
+		path
+			for i in (1...10)
+				&:nth-child({i})
+					$duration = .3s + (.2s * i)
+					animation moveRight $duration .2s linear infinite alternate
+
+@keyframes flyAirplane
+	0%
+		transform translate(60px, 15px) rotateX(0)
+
+	30%
+		transform translate(40px, 10px) rotateX(-10deg)
+	
+	60%
+		transform translate(20px, 5px) rotateX(4deg)
+	
+	100%
+		transform translate(0) rotateX(0)
+
+@keyframes moveRight
+	0%
+		transform translateX(0)
+	100%
+		transform translateX(10px)
