@@ -1,0 +1,66 @@
+.badge
+	&__icon-container
+		.badge
+			&__ui
+				.image
+					transform-origin 45%
+				.button
+					transform-origin 35% 50%
+			&__arrow
+				clip-path polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)
+
+
+
+	&__icon-container:hover
+		.badge
+			&__ui
+				&:first-of-type
+					.border
+						animation translateAnimation .2s .1s linear both
+
+					.image
+						animation expandBoxOpacity .3s .2s linear both
+					
+					.button
+						animation bounceExpansionOpacity .6s .2s linear both
+
+				&:last-of-type
+					.border
+						animation translateAnimation .2s .5s linear both
+
+					.image
+						animation translateAnimation .2s .6s linear both
+									
+					.content
+						path
+							for i in (1...4)
+								&:nth-child({i})
+									$duration = .2s * i
+									animation translateAnimation $duration .8s linear both
+									
+			&__arrow
+				animation clip .3s .4s linear both
+				
+
+
+
+@keyframes clip
+	0%
+		opacity 0
+		clip-path polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)
+
+	100%
+		opacity 1
+		clip-path polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)
+
+
+@keyframes bounceExpansionOpacity
+	0%
+		opacity 0
+		transform scale(0.8)
+	50%
+		transform scale(1.2)
+
+	100%
+		opacity 1
+		transform scale(1)
