@@ -1,0 +1,49 @@
+.badge
+	&__icon-container:hover
+		.badge
+			.paper
+				transform-origin center
+				animation expandBoxOpacity .4s .1s ease both
+
+			.hand__left
+				transform-origin 100% 29%
+				animation shakeLeftHand .9s .2s ease-in both
+
+			.hand__right
+				transform-origin 0% 29%
+				animation shakeRightHand .9s .2s ease-in both
+				
+
+@keyframes shakeLeftHand
+	0%
+		opacity 0
+	
+	25%
+		opacity 1
+		transform rotate(0)
+
+	50%
+		transform rotate(1.15deg)
+
+	75%
+		transform rotate(-1.15deg)
+
+	100%
+		transform rotate(0)
+		
+@keyframes shakeRightHand
+	0%
+		opacity 0
+	
+	25%
+		opacity 1
+		transform rotate(0)
+	
+	50%
+		transform rotate(-1.15deg)
+
+	75%
+		transform rotate(1.15deg)
+
+	100%
+		transform rotate(0)
