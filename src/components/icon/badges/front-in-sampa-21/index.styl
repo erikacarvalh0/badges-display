@@ -1,0 +1,72 @@
+.badge__icon-container:hover .fis
+	.column
+		&.left
+			.title
+					animation clip .5s .1s ease-in both
+
+			.first
+				.title
+					fill #FF6584
+					transition fill .6s ease
+
+				.image
+					transform-origin center
+					animation expandBoxOpacity .4s .1s ease-in both
+
+			& > .image
+				transform-origin center
+				fill #BABCBF
+				transition fill .6s ease
+				
+				for i in (1...5)
+					&:nth-child({i})
+						$duration = .3s + (.2s * i)
+						animation expandBoxOpacity $duration .2s linear both
+				
+			.last
+				.title
+					fill #3F4147
+					transition fill .6s .3s ease
+
+				.text path
+					fill #BABCBF
+					transition fill .6s .3s ease
+
+					for i in (1...5)
+						&:nth-child({i})
+							$duration = .3s + (.2s * i)
+							animation clip $duration .4s ease-in both
+
+		&.right
+			.box
+				animation translateAnimation .8s .3s ease-in both
+
+				path:first-child
+					fill #BABCBF
+					transition fill .6s .3s ease
+
+				.text path
+					for i in (1...5)
+						&:nth-child({i})
+							$duration = .2s * i
+							animation clip $duration .5s ease-in both
+
+			.button
+				transform-origin center
+
+				&.first
+					fill #3F4147
+					transition fill .8s .3s ease
+					animation translateAnimation .8s .3s linear both
+
+				&.last
+					fill #FF6584
+					transition fill .8s .3s ease
+					animation fadeIn 1s .5s linear both
+
+			
+@keyframes fadeIn
+	from
+		opacity 0
+	to
+		opacity 1
