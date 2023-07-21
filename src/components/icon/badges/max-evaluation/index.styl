@@ -1,0 +1,48 @@
+@keyframes rotateLeaves
+	0%
+		opacity 0
+		transform rotate(var(--rotate))
+	100%
+		opacity 1
+		transform rotate(0)
+
+@keyframes clipCurtain
+	0%
+		clip-path polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)
+
+	100%
+		clip-path polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)
+		
+.badge__icon-container:hover .me
+	.bg
+		transform-origin 50% 30%
+		animation clipCurtain .2s .1s ease-out both
+
+	.leaf
+		transform-origin 49% 56%
+
+		&.white
+			&.left
+				--rotate 15deg
+				animation rotateLeaves .4s .55s linear both
+			&.right
+				--rotate -15deg
+				animation rotateLeaves .4s .55s linear both
+
+		&.pink
+			&.left
+				--rotate 45deg
+				animation rotateLeaves .4s .2s linear both
+			&.right
+				--rotate -45deg
+				animation rotateLeaves .4s .2s linear both
+
+		
+	.stars
+		path
+			transform-origin center
+
+			for i in (1...7)
+				&:nth-child({i})
+					$duration = .1s * i
+					animation expandBoxOpacity $duration .5s linear both
