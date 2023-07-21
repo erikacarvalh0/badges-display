@@ -1,0 +1,35 @@
+@keyframes translateDynamically
+	from
+		opacity .5
+		transform translate(var(--translateValue))
+	to
+		opacity 1
+		transform translate(0)
+
+.badge__icon-container:hover .pens		
+	.piece
+		transform-origin center
+
+		&.top.right
+			--translateValue -20px, 60px
+			animation translateDynamically .3s .3s ease both
+
+		&.top.left
+			--translateValue 30px, 60px
+			animation translateDynamically .4s .3s ease both
+
+		&.middle.right
+			--translateValue -80px, 20px
+			animation translateDynamically .4s .3s ease both
+
+		&.middle.left
+			--translateValue 30px, 10px
+			animation translateDynamically .3s .3s ease both
+
+		&.bottom.right
+			--translateValue -20px, -60px
+			animation translateDynamically .4s .3s ease both
+
+		&.bottom.left
+			--translateValue 20px, -60px
+			animation translateDynamically .2s .3s ease both
