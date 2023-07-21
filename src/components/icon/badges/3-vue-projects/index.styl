@@ -1,0 +1,27 @@
+.badge__icon-container:hover .vue3		
+	.content
+		path
+			&:first-child
+				fill #3F4147
+
+			for i in (1...7)
+				&:nth-child({i})
+					$duration = .2s * i
+					animation clip $duration .1s linear both
+
+	.icon
+		&.one
+			animation translateAnimation .2s .1s linear both
+		&.two
+			animation translateAnimation .4s .1s linear both
+		&.three
+			animation translateAnimation .6s .1s linear both
+		&.four
+			animation translateAnimation .8s .1s linear both
+		&.five
+			animation translateAnimation 1s .1s linear both
+		&.six
+			animation translateAnimation 1.2s .1s linear both
+
+		.graph
+			animation fillPink .4s .8s linear both
