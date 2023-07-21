@@ -1,0 +1,24 @@
+.badge__icon-container:hover .nth		
+	.box
+		&:not(.one)
+			fill #BABCBF
+			for i in (1...7)
+				&:nth-child({i})
+					$duration = .2s * i
+					animation translateAnimation $duration .1s linear both
+		
+		&.one
+			fill #BABCBF
+			animation moveContentOne 1s .6s linear both
+
+
+@keyframes moveContentOne 
+	0%
+		fill #C4E9ED
+		opacity 0
+		transform: translate(10px, -21px)
+
+	100%
+		fill #FF6584
+		opacity 1
+		transform: translate(0, 0)
