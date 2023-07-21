@@ -1,0 +1,26 @@
+.badge__icon-container:hover .react3		
+	.box
+		fill #BABCBF
+		for i in (1...7)
+			&:nth-child({i})
+				$duration = .2s * i
+				animation translateAnimation $duration .1s linear both
+				
+			&:first-child
+				animation fillPink .3s .5s linear both, translateAnimation .2s .1s linear both
+			&:nth-child(2)
+				animation fillPink .3s .5s linear both, translateAnimation .4s .1s linear both
+
+	.checkbox__container
+		animation fadeIn .6s .2s ease-out both
+
+		.check
+			animation fillPink .3s .5s linear both, clip .6s .2s ease-out both
+
+
+@keyframes fillPink 
+	from
+		fill #BABCBF
+	to
+		fill #FF6584
+
