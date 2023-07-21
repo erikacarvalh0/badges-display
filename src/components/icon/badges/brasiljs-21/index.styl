@@ -1,0 +1,25 @@
+.badge__icon-container:hover .brasiljs		
+	.content
+		& > path
+			for i in (1...23)
+				&:nth-child({i})
+					$duration = .2s * i
+					animation clip $duration .1s linear infinite
+
+	.tag
+		&.left
+			animation translateLeft 1.2s .4s linear infinite alternate
+		&.right
+			animation translateRight 1.2s .4s linear infinite alternate
+
+@keyframes translateLeft
+	from
+		transform translateX(0px)
+	to
+		transform translateX(-10px)
+
+@keyframes translateRight
+	from
+		transform translateX(0px)
+	to
+		transform translateX(10px)
