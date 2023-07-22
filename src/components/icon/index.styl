@@ -4,16 +4,22 @@
 		transition transform .6s ease, opacity .65s ease-out
 
 	&__icon-label
-		position absolute
-		bottom 5px
-		left 50%
-		width 130px
 		margin 0
 		line-height .9em
 		color white
 		text-transform uppercase
 		text-align center
-		transform translateX(-50%)
+
+		&-container
+			position absolute
+			bottom 0
+			left 50%
+			display flex
+			align-items center
+			justify-content center
+			width 130px
+			height 40px
+			transform translateX(-50%)
 
 	&__checkbox
 		&:checked
