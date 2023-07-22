@@ -1,6 +1,8 @@
 @import "../components/**/**/index.styl"
+@import "../components/**/index.styl"
 
 body
+	margin 0
 	font-family 'Nunito', sans-serif
 	--pink #FF6584
 	--pinkLight #EEC0CC
@@ -13,9 +15,13 @@ body
 
 	--grey100 #F4F4F6
 
+.main
+	display flex
+	flex-direction column
+	gap 5vh
+
 .badges__list
 	display flex
 	justify-content center
 	flex-wrap wrap
-	margin-top 150px
 	gap 20px

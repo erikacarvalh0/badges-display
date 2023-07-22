@@ -1,0 +1,27 @@
+include ../badge/index.pug
+
+mixin hero()
+	section(class="hero")
+		h1(class="hero__title") Painel de Conquistas
+
+		div(class="hero__container")
+			div(class="hero__text-container")
+				p(class="hero__text") Este projeto é um compilado de conquistas adquiridas ao longo da minha trajetória profissional: aprendizados, novos níveis, conquistas que contribuiram para meu crescimento de alguma forma e que impactaram direta ou indiretamente a profissional que me tornei. Estar em times grandes, aprender novas tecnologias, viajar a trabalho, dividir o espaço com outras mulheres, tudo isso acrescentou de alguma forma e acredito que valha a pena celebrar aqui nesse painel. Além disso, serve como um lembrete de que muito mais está por vir. :)
+				p(class="hero__text") Quer contribuir com a minha carreira? Entre em contato!
+
+
+			ul(class="badges__list")
+				+badge('first-course', 'pink')
+				+badge('technical-course', 'pink')
+				+badge('digital-design', 'pink')
+				+badge('job-class', 'acqua')
+				+badge('meeting-client', 'grey')
+				+badge('tcc', 'pink')
+				+badge('job-atelie', 'acqua')
+				+badge('meetup-marathon', 'grey') 
+				+badge('front-team', 'acqua') 
+				+badge('bigger-front-team', 'acqua') 
+				+badge('travel', 'grey') 
+				+badge('women', 'grey') 
+				+badge('hackathon', 'grey') 
+				+badge('plenissima', 'acqua') 
