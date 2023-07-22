@@ -1,7 +1,5 @@
 .badge
 	&__description
-		background url('../images/description-bg.svg') no-repeat center
-		background-size cover
 		display flex
 		flex-direction column
 		justify-content center
@@ -48,3 +46,31 @@
 				.badge__description
 					z-index 1
 					transform rotateY(0)
+
+.acqua
+	.badge__label-bg
+		color var(--acqua)
+		
+	.badge__description
+		background url('../images/description-bg-green.svg') no-repeat center
+		background-size cover
+
+.grey
+	.badge__label-bg
+		color var(--grey)
+		
+	.badge__description
+		background url('../images/description-bg-grey.svg') no-repeat center
+		background-size cover
+		
+		&-highlight,
+		.icon.book
+			color var(--grey100)
+
+.pink
+	.badge__label-bg
+		color var(--pink)
+		
+	.badge__description
+		background url('../images/description-bg.svg') no-repeat center
+		background-size cover

@@ -1,9 +1,10 @@
 .badge
 	&__bg
+		color var(--grey100)
 		transform-origin center
 		transition transform .4s ease-in
 
-	&-border
+	&__border
 		stroke-dasharray 1250
 		stroke-dashoffset 0
 		transition stroke-dashoffset .5s ease-in
@@ -18,5 +19,26 @@
 		.badge
 			&__bg
 				transform scale(1.2)
-			&-border
+			&__border
 				stroke-dashoffset -1250
+
+.acqua
+	.badge__border
+		color var(--acquaLight)
+
+	.badge__border--hidden
+		color var(--acqua)
+
+.grey
+	.badge__border
+		color var(--greyLight)
+
+	.badge__border--hidden
+		color var(--grey)
+
+.pink
+	.badge__border
+		color var(--pinkLight)
+
+	.badge__border--hidden
+		color var(--pink)
